@@ -11,7 +11,7 @@ import javax.jws.WebService;
 @WebService
 public interface Hello {
     @WebMethod
-    public String sayHello(String str);
+    public String sayHello(String strs);
     @WebMethod
     public JSONObject sayJson(String str);
     @WebMethod
