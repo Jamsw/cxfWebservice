@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8"  pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+        </Console>
+        <RollingFile name="DEBUG_ROLLING_FILE"
+                     fileName="engine.log"
+                     filePattern="%d{yyyy-MM-dd}-engine.log">
+            <PatternLayout>
+                <Pattern>%d [%t] %-5p [%c] - %m%n  </Pattern>
+                <Charset>UTF-8</Charset>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="24"/>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="DEBUG_ROLLING_FILE"/>
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
