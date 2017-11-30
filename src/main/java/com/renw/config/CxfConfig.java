@@ -13,7 +13,6 @@ import javax.xml.ws.Endpoint;
 /**
  * Created by dell on 2017/11/23.
  */
-@Configuration
 public class CxfConfig {
 
     @Bean

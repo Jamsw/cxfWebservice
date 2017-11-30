@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /**
  * 跳转普通html页面
  */
-@Configuration
 public class MvcConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
